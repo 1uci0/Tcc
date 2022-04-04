@@ -1,5 +1,30 @@
 body {
     background:cadetblue;
-    color: white;
+    color: black;
     font: normal 10pt Arial;
+    text-align: center;
+}
+
+.s1 {
+    padding: 20px;
+    border-radius: 3px;
+    background-color:darkslategray;
+    margin: auto;
+}
+
+.Parametros_Iniciais {
+    display: flex;
+}
+
+.p_i {
+    border: 1px solid black;
+    padding: 7px;
+    border-radius: 5px;
+    background-color: oldlace;
+    margin-top: 10px;
+    margin: auto;
+}
+
+.calculate {
+    margin-top: 15px;
 }
