@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,18 +9,69 @@
 </head>
 <body>
     <!--Parâmetros iniciais-->
-    
     <h1>Engrenagens de Dentes Retos</h1>                                <!--Título da página-->
-
-    <p> M<sub>n</sub> = <input type="number" name="Mn" id="Mn"> mm</p>  <!--Modulo normal-->
-
-    <p> Z = <input type="number" name="Z" id="Z"></p>                   <!--Número de dentes-->
-
-    <p id="diametro"> d<sub>p</sub> = </p>                              <!--Diâmetro-->
-
-    <input type="button" value="Calcular" onclick="calcular()">         <!--Botão calcular-->
     
- 
+    <div class="s1">
+        <div class="Parametros_Iniciais">
+
+            <div class="p_i">
+                <label> Módulo Normal:
+                    <select id="Mn">
+                        <option value="1"> 1 </option>
+                        <option value="1.125"> 1.125 </option>
+                        <option value="1.375"> 1.375 </option>
+                        <option value="1.5"> 1.5 </option>
+                        <option value="1.75"> 1.75 </option>
+                        <option value="2"> 2 </option>
+                        <option value="2.25"> 2.25 </option>
+                        <option value="2.5"> 2.5 </option>
+                        <option value="2.75"> 2.75 </option>
+                        <option value="3"> 3 </option>
+                        <option value="3.5"> 3.5 </option>
+                        <option value="4"> 4 </option>
+                        <option value="4.5"> 4.5 </option>
+                        <option value="5"> 5 </option>
+                        <option value="5.5"> 5.5 </option>
+                        <option value="6"> 6 </option>
+                        <option value="7"> 7 </option>
+                        <option value="8"> 8 </option>
+                        <option value="9"> 9 </option>
+                        <option value="10"> 10 </option>
+                        <option value="11"> 11 </option>
+                        <option value="12"> 12 </option>
+                        <option value="14"> 14 </option>
+                        <option value="16"> 16 </option>
+                        <option value="18"> 18 </option>
+                        <option value="20"> 20 </option>
+                        <option value="22"> 22 </option>
+                        <option value="25"> 25 </option>
+                        <option value="28"> 28 </option>
+                        <option value="32"> 32 </option>
+                        <option value="36"> 36 </option>
+                        <option value="40"> 40 </option>
+                        <option value="45"> 45 </option>
+                        <option value="50"> 50</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="p_i">
+                <label> Número de dentes:
+                    <input type="number" name="Z" id="Z">
+                </label>
+            </div>
+
+            <div class="p_i">
+                <label id="diametro"> diâmetro:                              
+                </label>
+            </div>
+        </div>
+        
+        <div class="calculate">
+            <input type="button" value="Calcular" onclick="calcular()">         <!--Botão calcular-->
+        </div>
+    </div>
+    
     <script src="tcc.js"></script>
 </body>
 </html>
