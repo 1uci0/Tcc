@@ -7,14 +7,16 @@ body {
 
 .s1 {
     padding: 20px;
-    border-radius: 3px;
+    border-radius: 5px;
     background-color:darkslategray;
     margin: auto;
 }
 
+
 .Parametros_Iniciais {
     display: flex;
 }
+
 
 .p_i {
     border: 1px solid black;
@@ -23,6 +25,41 @@ body {
     background-color: oldlace;
     margin-top: 10px;
     margin: auto;
+}
+
+.engrenagem {
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    background-color:cadetblue;
+    margin-top: 10px;
+    display: flex;
+}
+
+.eng1 {
+    padding: 40px;
+    border-radius: 5px;
+    background-color:darkslategray;
+    margin: auto;
+    
+ 
+}
+
+.eng2 {
+    padding: 40px;
+    border-radius: 5px;
+    background-color:darkslategray;
+    margin: auto;
+
+}
+
+.eng {
+    color: black;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: oldlace;
+    margin: 5px;
 }
 
 .calculate {

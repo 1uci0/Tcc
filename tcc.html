@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Engenharia Mecânica - UFPB</title>
     <link rel="stylesheet" type="text/css" href="tcc.css">
+    
 </head>
 <body>
     <!--Parâmetros iniciais-->
@@ -15,8 +16,8 @@
         <div class="Parametros_Iniciais">
 
             <div class="p_i">
-                <label> Módulo Normal:
-                    <select id="Mn">
+                <label> Módulo:
+                    <select id="M">
                         <option value="1"> 1 </option>
                         <option value="1.125"> 1.125 </option>
                         <option value="1.375"> 1.375 </option>
@@ -56,22 +57,139 @@
             </div>
 
             <div class="p_i">
-                <label> Número de dentes:
-                    <input type="number" name="Z" id="Z">
+                <label> Φ:
+                    <select id="phi">
+                        <option value="20"> 20° </option>
+                        <option value="22.5"> 22.5° </option>
+                        <option value="25"> 25° </option>
+                    </select>
+                </label>
+            </div>
+                
+            <div class="p_i">
+                <label class="sd">Sistema de dente:
+
+                    <input type="radio" name="sistema_de_dente" id="pc" value="pc" checked>
+                    <label for="pc">Profundidade completa</label><br>
+
+                    <input type="radio" name="sistema_de_dente" id="curta" value="curta">
+                    <label for="curta">Profundidade curta</label>
+
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="engrenagem">
+
+        <div class="eng1"> Engrenagem 1
+            <div class="eng">
+                <label> Z:
+                    <input type="number" name="z1" id="z1">
                 </label>
             </div>
 
-            <div class="p_i">
-                <label id="diametro"> diâmetro:                              
+            <div class="eng">
+                <label> d<sub>p</sub>:
+                    <input type="number" name="dp1" id="dp1">
                 </label>
             </div>
+
+            <div class="eng">
+                <label>p</label>
+                <input type="number" name="pc1" id="pc1" readonly>
+            </div>
+
+            <div class="eng">
+                <label>t</label>
+                <input type="number" name="t1" id="t1" readonly>
+            </div>
+
+            <div class="eng">
+                <label>a</label>
+                <input type="number" name="a1" id="a1" readonly>
+            </div>
+
+            <div class="eng">
+                <label>b</label>
+                <input type="number" name="b1" id="b1" readonly>
+            </div>
+
+            <div class="eng">
+                <label>h<sub>t</sub></label>
+                <input type="number" name="ht1" id="ht1" readonly>
+            </div>
+
+            <div class="eng">
+                <label>r<sub>b</sub></label>
+                <input type="number" name="rb1" id="rb1" readonly>
+            </div>
+
+            <div class="eng">
+                <label>p<sub>b</sub></label>
+                <input type="number" name="pb1" id="pb1" readonly>
+            </div>
+
         </div>
-        
-        <div class="calculate">
-            <input type="button" value="Calcular" onclick="calcular()">         <!--Botão calcular-->
+
+        <div class="eng2"> Engrenagem 2
+            <div class="eng">
+                <label> Z:
+                    <input type="number" name="z2" id="z2">
+                </label>
+            </div>
+
+            <div class="eng">
+                <label> d<sub>p</sub>:
+                    <input type="number" name="dp2" id="dp2">
+                </label>
+            </div>
+
+            <div class="eng">
+                <label>p</label>
+                <input type="number" name="pc2" id="pc2" readonly>
+            </div>
+
+            <div class="eng">
+                <label>t</label>
+                <input type="number" name="t2" id="t2" readonly>
+            </div>
+
+            <div class="eng">
+                <label>a</label>
+                <input type="number" name="a2" id="a2" readonly>
+            </div>
+
+            <div class="eng">
+                <label>b</label>
+                <input type="number" name="b2" id="b2" readonly>
+            </div>
+
+            <div class="eng">
+                <label>h<sub>t</sub></label>
+                <input type="number" name="ht2" id="ht2" readonly>
+            </div>
+
+            <div class="eng">
+                <label>r<sub>b</sub></label>
+                <input type="number" name="rb2" id="rb2" readonly>
+            </div>
+
+            <div class="eng">
+                <label>p<sub>b</sub></label>
+                <input type="number" name="pb2" id="pb2" readonly>
+            </div>
+
         </div>
+
     </div>
-    
+
+    <div class="calculate">
+        <input type="button" value="Calcular" onclick="cal()">         <!--Botão calcular-->
+    </div>
+
     <script src="tcc.js"></script>
+    
 </body>
+
 </html>
