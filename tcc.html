@@ -12,8 +12,8 @@
     <!--Parâmetros iniciais-->
     <h1>Engrenagens de Dentes Retos</h1>                                <!--Título da página-->
     
-    <div class="s1">
-        <div class="Parametros_Iniciais">
+    <div class="p1">
+        <div class="parte1">
 
             <div class="p_i">
                 <label> Módulo:
@@ -82,15 +82,15 @@
 
     <div class="engrenagem">
 
-        <div class="eng1"> Engrenagem 1
+        <div class="col_1"> Pinhão
             <div class="eng">
-                <label> Z:
+                <label> Z
                     <input type="number" name="z1" id="z1">
                 </label>
             </div>
 
             <div class="eng">
-                <label> d<sub>p</sub>:
+                <label> d<sub>p</sub>
                     <input type="number" name="dp1" id="dp1">
                 </label>
             </div>
@@ -132,15 +132,41 @@
 
         </div>
 
-        <div class="eng2"> Engrenagem 2
+        <div class="col_2">
             <div class="eng">
-                <label> Z:
+                <label> i
+                    <input type="number" name="i" id="i">
+                </label>
+            </div>
+
+            <div class="eng">
+                <label> D
+                    <input type="number" name="D" id="D" readonly>
+                </label>
+            </div>
+
+            <div class="botoes">
+                <div class="calculate">
+                    <input type="button" value="Calcular" onclick="cal()">         <!--Botão calcular-->
+                </div>
+        
+                <div class="calculate">
+                    <input type="button" value="Reset" onclick="reset()">         <!--Botão calcular-->
+                </div>
+        
+            </div>
+
+        </div>
+
+        <div class="col_3"> Coroa
+            <div class="eng">
+                <label> Z
                     <input type="number" name="z2" id="z2">
                 </label>
             </div>
 
             <div class="eng">
-                <label> d<sub>p</sub>:
+                <label> d<sub>p</sub>
                     <input type="number" name="dp2" id="dp2">
                 </label>
             </div>
@@ -184,11 +210,45 @@
 
     </div>
 
-    <div class="calculate">
-        <input type="button" value="Calcular" onclick="cal()">         <!--Botão calcular-->
+    <h1>Interferência</h1>
+
+    <div class="interferencia">
+        
+        <div class="p1">
+
+            <div class="interferencia_resultado">
+                <div class="p_i">
+                    <label>Z<sub>mín<sub>p</sub></label>
+                    <input type="number" name="z_min_p" id="z_min_p" readonly>
+                </div>
+            </div>
+
+            <div class="interferencia_input">
+                
+                <label class="p_i">Altura dos dentes:
+
+                    <input class="input_radio" type="radio" name="altura_do_dente" id="ac" value="1" checked>
+                    <label for="ac">Altura completa</label><br>
+
+                    <input class="input_radio" type="radio" name="altura_do_dente" id="ar" value="0.8">
+                    <label for="ar">Altura reduzida</label>
+
+                </label>
+            
+            </div>
+
+            <div class="interferencia_resultado"></div>
+                <div class="p_i">
+                    <label>Z<sub>máx<sub>c</sub></label>
+                    <input type="number" name="z_max_c" id="z_max_c" readonly>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <script src="tcc.js"></script>
+    <script src="tcc01.js"></script>
     
 </body>
 

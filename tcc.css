@@ -5,26 +5,28 @@ body {
     text-align: center;
 }
 
-.s1 {
+.p1 {
     padding: 20px;
     border-radius: 5px;
     background-color:darkslategray;
-    margin: auto;
+    margin-right: auto;
+    display: inline-flex;
 }
 
 
-.Parametros_Iniciais {
-    display: flex;
+.parte1 {
+    display: inline-flex;
+    margin-right: 20px;
 }
 
 
 .p_i {
     border: 1px solid black;
-    padding: 7px;
     border-radius: 5px;
+    padding: 5px;
     background-color: oldlace;
-    margin-top: 10px;
-    margin: auto;
+    margin-right: 50px;
+    margin-left: 50px;
 }
 
 .engrenagem {
@@ -36,16 +38,21 @@ body {
     display: flex;
 }
 
-.eng1 {
+.col_1 {
     padding: 40px;
     border-radius: 5px;
     background-color:darkslategray;
     margin: auto;
-    
- 
 }
 
-.eng2 {
+.col_2 {
+    padding: 40px;
+    border-radius: 5px;
+    background-color:darkslategray;
+    margin: auto;
+}
+
+.col_3 {
     padding: 40px;
     border-radius: 5px;
     background-color:darkslategray;
@@ -62,6 +69,23 @@ body {
     margin: 5px;
 }
 
+.botoes {
+    margin-top: 20px;
+    display: flex;
+}
+
 .calculate {
-    margin-top: 15px;
+    margin: auto;
+}
+
+interferencia {
+    display: inline-flex;
+}
+
+.interferencia_input {
+    display: inline-flex;
+}
+
+.interferencia_resultado {
+    display: inline-flex;
 }
