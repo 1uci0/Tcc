@@ -10,12 +10,14 @@
 </head>
 <body>
     <!--Parâmetros iniciais-->
-    <h1>Engrenagens de Dentes Retos</h1>                                <!--Título da página-->
+    <h1 class="h1">Engrenagens de Dentes Retos</h1>                                <!--Título da página-->
     
-    <div class="p1">
-        <div class="parte1">
+    <h2 class="h2">Dados de Entrada:</h2>
+    
+    <div class="DadosdeEntrada1">
+        <div class="BarraHorizontal1">
 
-            <div class="p_i">
+            <div class="imput1">
                 <label> Módulo:
                     <select id="M">
                         <option value="1"> 1 </option>
@@ -56,7 +58,7 @@
                 </label>
             </div>
 
-            <div class="p_i">
+            <div class="imput1">
                 <label> Φ:
                     <select id="phi">
                         <option value="20"> 20° </option>
@@ -66,185 +68,271 @@
                 </label>
             </div>
                 
-            <div class="p_i">
-                <label class="sd">Sistema de dente:
-
+            <div class="imput1">
+                <label class="sd"> Sistema de dente:<br>
                     <input type="radio" name="sistema_de_dente" id="pc" value="pc" checked>
                     <label for="pc">Profundidade completa</label><br>
 
                     <input type="radio" name="sistema_de_dente" id="curta" value="curta">
                     <label for="curta">Profundidade curta</label>
-
-                </label>
-            </div>
-        </div>
-    </div>
-
-    <div class="engrenagem">
-
-        <div class="col_1"> Pinhão
-            <div class="eng">
-                <label> Z
-                    <input type="number" name="z1" id="z1">
                 </label>
             </div>
 
-            <div class="eng">
-                <label> d<sub>p</sub>
-                    <input type="number" name="dp1" id="dp1">
-                </label>
-            </div>
-
-            <div class="eng">
-                <label>p</label>
-                <input type="number" name="pc1" id="pc1" readonly>
-            </div>
-
-            <div class="eng">
-                <label>t</label>
-                <input type="number" name="t1" id="t1" readonly>
-            </div>
-
-            <div class="eng">
-                <label>a</label>
-                <input type="number" name="a1" id="a1" readonly>
-            </div>
-
-            <div class="eng">
-                <label>b</label>
-                <input type="number" name="b1" id="b1" readonly>
-            </div>
-
-            <div class="eng">
-                <label>h<sub>t</sub></label>
-                <input type="number" name="ht1" id="ht1" readonly>
-            </div>
-
-            <div class="eng">
-                <label>r<sub>b</sub></label>
-                <input type="number" name="rb1" id="rb1" readonly>
-            </div>
-
-            <div class="eng">
-                <label>p<sub>b</sub></label>
-                <input type="number" name="pb1" id="pb1" readonly>
-            </div>
-
-        </div>
-
-        <div class="col_2">
-            <div class="eng">
-                <label> i
-                    <input type="number" name="i" id="i">
-                </label>
-            </div>
-
-            <div class="eng">
-                <label> D
-                    <input type="number" name="D" id="D" readonly>
-                </label>
-            </div>
-
-            <div class="botoes">
-                <div class="calculate">
-                    <input type="button" value="Calcular" onclick="cal()">         <!--Botão calcular-->
-                </div>
-        
-                <div class="calculate">
-                    <input type="button" value="Reset" onclick="reset()">         <!--Botão calcular-->
-                </div>
-        
-            </div>
-
-        </div>
-
-        <div class="col_3"> Coroa
-            <div class="eng">
-                <label> Z
-                    <input type="number" name="z2" id="z2">
-                </label>
-            </div>
-
-            <div class="eng">
-                <label> d<sub>p</sub>
-                    <input type="number" name="dp2" id="dp2">
-                </label>
-            </div>
-
-            <div class="eng">
-                <label>p</label>
-                <input type="number" name="pc2" id="pc2" readonly>
-            </div>
-
-            <div class="eng">
-                <label>t</label>
-                <input type="number" name="t2" id="t2" readonly>
-            </div>
-
-            <div class="eng">
-                <label>a</label>
-                <input type="number" name="a2" id="a2" readonly>
-            </div>
-
-            <div class="eng">
-                <label>b</label>
-                <input type="number" name="b2" id="b2" readonly>
-            </div>
-
-            <div class="eng">
-                <label>h<sub>t</sub></label>
-                <input type="number" name="ht2" id="ht2" readonly>
-            </div>
-
-            <div class="eng">
-                <label>r<sub>b</sub></label>
-                <input type="number" name="rb2" id="rb2" readonly>
-            </div>
-
-            <div class="eng">
-                <label>p<sub>b</sub></label>
-                <input type="number" name="pb2" id="pb2" readonly>
-            </div>
-
-        </div>
-
-    </div>
-
-    <h1>Interferência</h1>
-
-    <div class="interferencia">
-        
-        <div class="p1">
-
-            <div class="interferencia_resultado">
-                <div class="p_i">
-                    <label>Z<sub>mín<sub>p</sub></label>
-                    <input type="number" name="z_min_p" id="z_min_p" readonly>
-                </div>
-            </div>
-
-            <div class="interferencia_input">
-                
-                <label class="p_i">Altura dos dentes:
-
+            <div class="imput1">             
+                <label> Altura do dente:<br>
                     <input class="input_radio" type="radio" name="altura_do_dente" id="ac" value="1" checked>
                     <label for="ac">Altura completa</label><br>
 
                     <input class="input_radio" type="radio" name="altura_do_dente" id="ar" value="0.8">
                     <label for="ar">Altura reduzida</label>
+                </label> 
+            </div>
 
+        </div>
+    </div>
+
+    <div class="DadosdeEntrada2">
+        <div class="BarraHorizontal2">Pinhão
+
+            <div class="imput2">
+                <label>Z
+                <input class="entradaDigitada" type="number" name="z1" id="z1" min="0" placeholder="n° de dente">
                 </label>
-            
+            </div>  
+
+            <div class="imput2">
+                <label>d<sub>p</sub>
+                <input class="entradaDigitada" type="number" name="dp1" id="dp1" min="0" placeholder="mm">
+                </label>
             </div>
 
-            <div class="interferencia_resultado"></div>
-                <div class="p_i">
-                    <label>Z<sub>máx<sub>c</sub></label>
-                    <input type="number" name="z_max_c" id="z_max_c" readonly>
-                </div>
+            <div class="imput2">
+                <label>n<sub>p</sub>
+                <input class="entradaDigitada" type="number" name="np" id="np" min="0" placeholder="rpm">
+                </label>
             </div>
+
+            <div class="imput2">
+                <label>T<sub>p</sub>
+                <input class="entradaDigitada" type="number" name="Tp" id="Tp" min="0" placeholder="N·m">
+                </label>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="DadosdeEntrada2">
+        <div class="BarraHorizontal2"> Taxas
+
+            <div class="imput2">
+                <label>i
+                <input class="entradaDigitada" type="number" name="i" id="i" min="0" placeholder="redução">
+                </label>
+            </div>
+
+            <div class="imput2">
+                <label>H<sub></sub>
+                <input class="entradaDigitada" type="number" name="H" id="H" min="0" placeholder="kW">
+                </label>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="DadosdeEntrada2">
+        <div class="BarraHorizontal2">Coroa
+
+            <div class="imput2">
+                <label>Z
+                <input class="entradaDigitada" type="number" name="z2" id="z2" min="0" placeholder="n° de dente">
+                </label>
+            </div>  
+
+            <div class="imput2">
+                <label>d<sub>p</sub>
+                <input class="entradaDigitada" type="number" name="dp2" id="dp2" min="0" placeholder="mm">
+                </label>
+            </div>
+
+            <div class="imput2">
+                <label>n<sub>c</sub>
+                <input class="entradaDigitada" type="number" name="nc" id="nc" min="0" placeholder="rpm">
+                </label>
+            </div>
+
+            <div class="imput2">
+                <label>T<sub>c</sub>
+                <input class="entradaDigitada" type="number" name="Tc" id="Tc" min="0" placeholder="N·m">
+                </label>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="calcular">
+        <div class="button">
+            <input type="button" value="Calcular" onclick="cal()">         <!--Botão calcular-->
         </div>
 
+        <div class="button">
+            <input type="button" value="Reset" onclick="reset()">         <!--Botão calcular-->
+        </div>
+
+    </div>
+
+    <h2 class="h2">Resultados:</h2>
+    <h3 class="h3">Geométrico:</h3>
+
+    <div class="SaidadeDados">
+        <div class="BarraHorizontal2">Pinhão
+
+            <div class="output1">
+                <label>p</label>
+                <input class="resultado" type="number" name="pc1" id="pc1" placeholder="mm" readonly>
+            </div>
+    
+            <div class="output1">
+                <label>t</label>
+                <input class="resultado" type="number" name="t1" id="t1" placeholder="mm" readonly>
+            </div>
+    
+            <div class="output1">
+                <label>a</label>
+                <input class="resultado" type="number" name="a1" id="a1" placeholder="mm" readonly>
+            </div>
+    
+            <div class="output1">
+                <label>b</label>
+                <input class="resultado" type="number" name="b1" id="b1" placeholder="mm" readonly>
+            </div>
+    
+            <div class="output1">
+                <label>h<sub>t</sub></label>
+                <input class="resultado" type="number" name="ht1" id="ht1" placeholder="mm" readonly>
+            </div>
+    
+            <div class="output1">
+                <label>r<sub>b</sub></label>
+                <input class="resultado" type="number" name="rb1" id="rb1" placeholder="mm" readonly>
+            </div>
+    
+            <div class="output1">
+                <label>p<sub>b</sub></label>
+                <input class="resultado" type="number" name="pb1" id="pb1" placeholder="mm" readonly>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="SaidadeDados">
+        <div class="BarraHorizontal2">Dist. entre eixos
+
+            <div class="output1">
+                <label>C</label>
+                <input class="resultado" type="number" name="C" id="C" placeholder="mm" readonly>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="SaidadeDados">
+        <div class="BarraHorizontal2">Coroa
+
+            <div class="output1">
+                <label>p</label>
+                <input class="resultado" type="number" name="pc2" id="pc2" placeholder="mm" readonly>
+            </div>
+    
+            <div class="output1">
+                <label>t</label>
+                <input class="resultado" type="number" name="t2" id="t2" placeholder="mm" readonly>
+            </div>
+    
+            <div class="output1">
+                <label>a</label>
+                <input class="resultado" type="number" name="a2" id="a2" placeholder="mm" readonly>
+            </div>
+    
+            <div class="output1">
+                <label>b</label>
+                <input class="resultado" type="number" name="b2" id="b2" placeholder="mm" readonly>
+            </div>
+    
+            <div class="output1">
+                <label>h<sub>t</sub></label>
+                <input class="resultado" type="number" name="ht2" id="ht2" placeholder="mm" readonly>
+            </div>
+    
+            <div class="output1">
+                <label>r<sub>b</sub></label>
+                <input class="resultado" type="number" name="rb2" id="rb2" placeholder="mm" readonly>
+            </div>
+    
+            <div class="output1">
+                <label>p<sub>b</sub></label>
+                <input class="resultado" type="number" name="pb2" id="pb2" placeholder="mm" readonly>
+            </div>
+
+        </div>
+    </div>
+
+    <h3 class="h3">Interferência:</h3>
+
+    <div class="SaidadeDados">
+        <div class="BarraHorizontal2"> N° mínimo de dentes
+
+            <div class="output1">
+                <label>Z<sub>p</sub></label>
+                <input class="resultado" type="number" name="z_min_p" id="z_min_p" placeholder="mm" readonly>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="SaidadeDados">
+        <div class="BarraHorizontal2"> N° máximo de dentes
+
+            <div class="output1">
+                <label>Z<sub>c<sub></label>
+                <input class="resultado" type="number" name="z_max_c" id="z_max_c" placeholder="mm" readonly>
+            </div>
+
+        </div>
+    </div>
+
+    <h3 class="h3">Força:</h3>
+
+    <div class="SaidadeDados">
+        <div class="BarraHorizontal2"> Força pinhão-coroa
+
+            <div class="output1">
+                <label>W<sub>p-c</sub></label>
+                <input class="resultado" type="number" name="w" id="w" placeholder="kN" readonly>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="SaidadeDados">
+        <div class="BarraHorizontal2"> Componente tangencial
+
+            <div class="output1">
+                <label>W<sup> t</sup></label>
+                <input class="resultado" type="number" name="wt" id="wt" placeholder="kN" readonly>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="SaidadeDados">
+        <div class="BarraHorizontal2"> Componente radial
+
+            <div class="output1">
+                <label>W<sup> r</sup></label>
+                <input class="resultado" type="number" name="wr" id="wr" placeholder="kN" readonly>
+            </div>
+
+        </div>
     </div>
 
     <script src="tcc.js"></script>
