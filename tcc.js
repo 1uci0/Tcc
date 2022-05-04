@@ -28,7 +28,7 @@ function cal() {
 
         if (((z1 == '' && dp1 == '') && (z2 == '' && dp2 == '')) || (z1 != '' && (z2 == '' && dp2 == '')) || (dp1 != '' && (z2 == '' && dp2 == '')) || (z2 != '' && (z1 == '' && dp1 == '')) || (dp2 != '' && (z1 == '' && dp1 == '')) || (((z1 != '' && dp1 != '' && m != dp1/z1) || (z2 != '' && dp2 != '' && m != dp2/z2)) )) {
             location.reload();
-            window.alert('Erro: Você deve digitar o campo do número de dentes ou do diâmetro corretamente');
+            window.alert('Erro: parâmetros incorretos');
         };
 
         if ((z1 != '' && z2 != '') && (dp1 == '' && dp2 == '')) {
@@ -108,7 +108,7 @@ function cal() {
     else {
         if (((z1 == '' && dp1 == '') && (z2 == '' && dp2 == '') && (i != '') || ((z1 != '' && dp1 == '') && (z2 != '' && dp2 == '') && (z2 != i*z1)) || ((z1 == '' && dp1 != '') && (z2 == '' && dp2 != '') && (dp2 != i*dp1)) || ((z1 != '' && dp1 == '') && (z2 == '' && dp2 != '') && (dp2 != i*m*z1)) || ((z1 == '' && dp1 != '') && (z2 != '' && dp2 == '') && (dp1 != (m/i)*z2)) || ((z1 != '' && dp1 != '') && (z2 == '' && dp2 == '') && (dp1 != m*z1)) || ((z1 == '' && dp1 == '') && (z2 != '' && dp2 != '') && (dp2 != m*z2)) || ((z1 != '' && dp1 != '') && (z2 != '' && dp2 == '') && ((dp1 != m*z1) || (z2 != i*z1)) || ((z1 != '' && dp1 != '') && (z2 == '' && dp2 != '') && ((dp1 != m*z1) || (dp2 != i*m*z1)) || ((z1 != '' && dp1 == '') && (z2 != '' && dp2 != '') && ((dp2 != m*z2) || (z1 != z2/i))) || ((z1 == '' && dp1 != '') && (z2 != '' && dp2 != '') && ((dp2 != m*z2) || (dp1 != dp2/i))) || ((z1 != '' && dp1 != '') && (z2 != '' && dp2 != '') && ((dp1 != m*z1) || (dp2 != m*z2) || z2 != i*z1 || dp2 != i*dp1)))))) {
             location.reload();
-            window.alert('Erro: Você deve digitar o campo da razão de redução e do número de dente ou do diâmetro corretamente');
+            window.alert('Erro: parâmetros incorretos');
         };
 
         if ((z1 != '' && dp1 == '') && (z2 == '' && dp2 == '')) {
@@ -173,7 +173,7 @@ function cal() {
 
         if (((np == '' || Tp == '') && (nc == '' || Tc == '')) || ((np != '' && Tp != '') && (nc != '' && nc != np/i)) || ((np != '' && Tp != '') && (Tc != '' && Tc != i*Tp)) || ((nc != '' && Tc != '') && (np != '' && np != i*nc)) || ((nc != '' && Tc != '') && (Tp != '' && Tp != Tc/i)) || ((np != '' && Tp != '') && (nc != '' && Tc != '') && (np != i*nc && Tc != i*Tp))) {
             location.reload();
-            window.alert('Erro: Você deve digitar o campo da velocidade angular e do torque da engrenagem corretamente');
+            window.alert('Erro: parâmetros incorretos');
         };
 
         if (np != '' && Tp != '') {
@@ -192,42 +192,12 @@ function cal() {
             var Tp = Tc/i;
         }
 
-        else if (np != '' && Tp != '' && nc != '') {
-            var wt = 2*Tp/dp1;
-            var H = (Math.PI*dp1*np*wt)/60000;
-
-            var Tc = 0.5*dp2*wt;
-        }
-
-        else if (np != '' && Tp != '' && Tc != '') {
-            var wt = 2*Tp/dp1;
-            var H = (Math.PI*dp1*np*wt)/60000;
-
-            var Tc = 0.5*dp2*wt;
-            var nc = (60000*H)/(Math.PI*dp2*wt);
-        }
-
-        else if (nc != '' && Tc != '' && np != '') {
-            var wt = 2*Tc/dp2;
-            var H = (Math.PI*dp2*nc*wt)/60000;
-
-            var Tp = 0.5*dp1*wt;
-        }
-
-        else if (nc != '' && Tc != '' && Tp != '') {
-            var wt = 2*Tc/dp2;
-            var H = (Math.PI*dp2*nc*wt)/60000;
-
-            var Tp = 0.5*dp1*wt;
-            var np = (60000*H)/(Math.PI*dp1*wt);
-        }
-
     }
 
     else {
         if ((np == '' && Tp == '') && (nc == '' && Tc == '') || ((np != '' && Tp != '') && np != ((30000*H)/(Math.PI*Tp))) || ((nc != '' && Tc != '') && nc != (30000*H/(Math.PI*Tc))) || ((np != '' && nc != '') && (np != i*nc)) || ((Tp != '' && Tc != '') && (Tc != i*Tp)) || ((np != '' && Tc != '') && (np != (30000*H*i)/(Math.PI*Tc))) || ((Tp != '' && nc != '') && (Tp != (30000*H)/(Math.PI*i*nc))) || ((np != '' && Tp != '') && (nc != '' && Tc != '') && (np != i*nc || Tc != i*Tp))) {
             location.reload();
-            window.alert('Erro: potencia incorreta');
+            window.alert('Erro: parâmetros incorretos');
         }
 
         if (np != '') {
@@ -351,4 +321,10 @@ function cal() {
         } 
     }
 
+    var w = wt/Math.cos(phi_rad);
+    var wr = w*Math.sin(phi_rad);
+
+    window.document.getElementById('w').value = w.toFixed(2);
+    window.document.getElementById('wt').value = wt.toFixed(2);
+    window.document.getElementById('wr').value = wr.toFixed(2);
 }
