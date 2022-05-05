@@ -91,30 +91,88 @@
         </div>
     </div>
 
+    <div class="DadosdeEntrada1">
+        <div class="BarraHorizontal1">
+
+            <div class="parametro">
+                <label>
+                    <input type="radio" name="coluna1" id="z1" value="z1">
+                    <label style="margin-right: 10px;" for="z1">Z<sub>p</sub></label><br>
+
+                    <input style="margin-top: 10px;" type="radio" name="coluna4" id="n1" value="n1">
+                    <label style="margin-right: 10px;" for="n1">n<sub>p</sub></label><br>
+                </label>
+
+                <label>
+                    <input style="margin-top: 3px;" type="radio" name="coluna1" id="dp1" value="dp1">
+                    <label style="margin-right: 10px;" for="dp1">d<sub>p<sub>p</sub></label><br>
+
+                    <input style="margin-top: 7px;" type="radio" name="coluna4" id="n2" value="n2">
+                    <label style="margin-right: 10px;" for="n2">n<sub>c</sub></label><br>
+                </label>
+            </div>
+
+            <div class="parametro">
+                
+                <label>
+                    <input type="radio" name="coluna2" id="reducao" value="red">
+                    <label for="reducao">i<sub></sub></label><br>
+
+                    <input style="margin-top: 10px;" type="radio" name="coluna3" id="potencia" value="pot">
+                    <label for="potencia">H</label><br>
+                </label>
+
+                <label>
+                    <input type="radio" name="coluna2" id="z2" value="z2">
+                    <label for="z1">Z<sub>c</sub></label><br>
+
+                    <input style="margin-top: 10px;" type="radio" name="coluna3" id="T1" value="T1">
+                    <label for="T1">T<sub>p</sub></label><br>
+                </label>
+
+                <label>
+                    <input type="radio" name="coluna2" id="dp2" value="dp2">
+                    <label for="dp2">d<sub>p<sub>c</sub></label><br>
+
+                    <input style="margin-top: 7px;" type="radio" name="coluna3" id="T2" value="T2">
+                    <label for="T2">T<sub>c</sub></label><br>
+                </label>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="calcular1">
+        <div class="button1">
+            <input type="button" id="confirmar" value="Confirmar Parâmetros" onclick="confirmar()">         <!--Botão calcular-->
+        </div>
+    </div>
+
     <div class="DadosdeEntrada2">
         <div class="BarraHorizontal2">Pinhão
 
             <div class="imput2">
-                <label>Z
-                <input class="entradaDigitada" type="number" name="z1" id="z1" min="0" placeholder="n° de dente">
+                <label>Z<sub>p</sub>
+                <input class="entradaDigitada" type="number" name="zp" id="zp" min="0" placeholder="n° de dente" readonly>
                 </label>
             </div>  
 
             <div class="imput2">
-                <label>d<sub>p</sub>
-                <input class="entradaDigitada" type="number" name="dp1" id="dp1" min="0" placeholder="mm">
+                <label>d<sub>p<sub>p</sub>
+                <input class="entradaDigitada" type="number" name="dpp" id="dpp" min="0" placeholder="mm" readonly>
                 </label>
             </div>
 
             <div class="imput2">
                 <label>n<sub>p</sub>
-                <input class="entradaDigitada" type="number" name="np" id="np" min="0" placeholder="rpm">
+                <input class="entradaDigitada" type="number" name="np" id="np" min="0" placeholder="rpm" readonly>
                 </label>
             </div>
 
             <div class="imput2">
                 <label>T<sub>p</sub>
-                <input class="entradaDigitada" type="number" name="Tp" id="Tp" min="0" placeholder="N·m">
+                <input class="entradaDigitada" type="number" name="Tp" id="Tp" min="0" placeholder="N·m" readonly>
                 </label>
             </div>
 
@@ -126,13 +184,13 @@
 
             <div class="imput2">
                 <label>i
-                <input class="entradaDigitada" type="number" name="i" id="i" min="0" placeholder="redução">
+                <input class="entradaDigitada" type="number" name="i" id="i" min="0" placeholder="redução" readonly>
                 </label>
             </div>
 
             <div class="imput2">
                 <label>H<sub></sub>
-                <input class="entradaDigitada" type="number" name="H" id="H" min="0" placeholder="kW">
+                <input class="entradaDigitada" type="number" name="H" id="H" min="0" placeholder="kW" readonly>
                 </label>
             </div>
 
@@ -143,26 +201,26 @@
         <div class="BarraHorizontal2">Coroa
 
             <div class="imput2">
-                <label>Z
-                <input class="entradaDigitada" type="number" name="z2" id="z2" min="0" placeholder="n° de dente">
+                <label>Z<sub>c</sub>
+                <input class="entradaDigitada" type="number" name="zc" id="zc" min="0" placeholder="n° de dente" readonly>
                 </label>
             </div>  
 
             <div class="imput2">
-                <label>d<sub>p</sub>
-                <input class="entradaDigitada" type="number" name="dp2" id="dp2" min="0" placeholder="mm">
+                <label>d<sub>p<sub>c</sub>
+                <input class="entradaDigitada" type="number" name="dpc" id="dpc" min="0" placeholder="mm" readonly>
                 </label>
             </div>
 
             <div class="imput2">
                 <label>n<sub>c</sub>
-                <input class="entradaDigitada" type="number" name="nc" id="nc" min="0" placeholder="rpm">
+                <input class="entradaDigitada" type="number" name="nc" id="nc" min="0" placeholder="rpm" readonly>
                 </label>
             </div>
 
             <div class="imput2">
                 <label>T<sub>c</sub>
-                <input class="entradaDigitada" type="number" name="Tc" id="Tc" min="0" placeholder="N·m">
+                <input class="entradaDigitada" type="number" name="Tc" id="Tc" min="0" placeholder="N·m" readonly>
                 </label>
             </div>
 

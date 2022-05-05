@@ -48,6 +48,18 @@ body {
     text-align: justify;
 }
 
+.parametro {
+    padding: 10px;
+    border-radius: 5px;
+    background-color:oldlace;
+    color: black;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: justify;
+    display: inline-flex;
+}
+
 .DadosdeEntrada2 {
     color: white;
     padding: 20px;
@@ -72,6 +84,15 @@ body {
     margin-top: 5px;
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.calcular1 {
+    display: inline-flexbox;
+}
+
+.button1 {
+    margin-top: 5px;
+    display: inline-flex;
 }
 
 .calcular {
