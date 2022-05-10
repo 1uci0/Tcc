@@ -223,32 +223,24 @@ function cal() {
 
         if ((z1 != '' && dp1 != '') && (z2 != '' && dp2 != '') && (dp1 == m*z1 && dp2 == m*z2) && (z2 == i*z1 && dp2 == i*dp1)) {
         
-            // pinhão
-            var pc1 = Math.PI*m;
-            var t1 = pc1/2;
-            var rb1 = 0.5*dp1*Math.cos(phi_rad);
-            var pb1 = pc1*Math.cos(phi_rad);
-    
-            window.document.getElementById('pc1').value = pc1.toFixed(2);
-            window.document.getElementById('t1').value = t1.toFixed(2);
-            window.document.getElementById('rb1').value = rb1.toFixed(2);
-            window.document.getElementById('pb1').value = pb1.toFixed(2);
-    
-            // coroa
-            var pc2 = Math.PI*m;
-            var t2 = pc2/2;
-            var rb2 = 0.5*dp2*Math.cos(phi_rad);
-            var pb2 = pc2*Math.cos(phi_rad);
-    
-            window.document.getElementById('pc2').value = pc2.toFixed(2);
-            window.document.getElementById('t2').value = t2.toFixed(2);
-            window.document.getElementById('rb2').value = rb2.toFixed(2);
-            window.document.getElementById('pb2').value = pb2.toFixed(2);
-    
-            // distância entre eixos de centro
+            // passo circular, espessura do dente e distância entre eixos
+            var pc = Math.PI*m;
+            var pb = pc*Math.cos(phi_rad);
+            var t = pc/2;
             var C = 0.5*(dp1 + dp2);
-    
+
+            window.document.getElementById('Pc').value = pc.toFixed(2);
+            window.document.getElementById('pb').value = pb.toFixed(2);
+            window.document.getElementById('t').value = t.toFixed(2);
             window.document.getElementById('C').value = C.toFixed(2);
+
+            // pinhão
+            var db1 = dp1*Math.cos(phi_rad);
+            window.document.getElementById('dbp').value = db1.toFixed(2);
+
+            // coroa
+            var db2 = dp2*Math.cos(phi_rad);
+            window.document.getElementById('dbc').value = db2.toFixed(2);
     
             // Interferência no pinhão - número mínimo de dentes que o pinhão deve possuir para que não haja interferência
             var z_min_p = (2*k/((1 + 2*i)*(Math.sin(phi_rad)*Math.sin(phi_rad))))*(i + Math.sqrt(i*i + (1 + 2*i)*(Math.sin(phi_rad)*Math.sin(phi_rad))));
@@ -274,29 +266,42 @@ function cal() {
                     var b2 = m;
                 }
                 else if (phi == 22.5 || phi == 25) {
-                    window.document.getElementById('a1').value = '';
-                    window.document.getElementById('b1').value = '';
-                    window.document.getElementById('ht1').value = '';
+                    window.document.getElementById('ap').value = '';
+                    window.document.getElementById('bp').value = '';
+                    window.document.getElementById('htp').value = '';
+                    window.document.getElementById('dep').value = '';
+                    window.document.getElementById('drp').value = '';
     
-                    window.document.getElementById('a2').value = '';
-                    window.document.getElementById('b2').value = '';
-                    window.document.getElementById('ht2').value = '';
+                    window.document.getElementById('ac').value = '';
+                    window.document.getElementById('bc').value = '';
+                    window.document.getElementById('htc').value = '';
+                    window.document.getElementById('dec').value = '';
+                    window.document.getElementById('drc').value = '';
                 }
             }
     
             var ht1 = a1 + b1;
+            var de1 = dp1 + 2*a1; 
+            var dr1 = dp1 - 2*b1; 
+
             var ht2 = a2 + b2;
+            var de2 = dp2 + 2*a2;                
+            var dr2 = dp2 - 2*b2;         
     
             if (sd == 'pc' || (sd == 'curta' && phi == 20)) {
                 // pinhão
-                window.document.getElementById('a1').value = a1.toFixed(2);
-                window.document.getElementById('b1').value = b1.toFixed(2);
-                window.document.getElementById('ht1').value = ht1.toFixed(2);
+                window.document.getElementById('ap').value = a1.toFixed(2);
+                window.document.getElementById('bp').value = b1.toFixed(2);
+                window.document.getElementById('htp').value = ht1.toFixed(2);
+                window.document.getElementById('dep').value = de1.toFixed(2);
+                window.document.getElementById('drp').value = dr1.toFixed(2);
     
                 // coroa
-                window.document.getElementById('a2').value = a2.toFixed(2);
-                window.document.getElementById('b2').value = b2.toFixed(2);
-                window.document.getElementById('ht2').value = ht2.toFixed(2);
+                window.document.getElementById('ac').value = a2.toFixed(2);
+                window.document.getElementById('bc').value = b2.toFixed(2);
+                window.document.getElementById('htc').value = ht2.toFixed(2);
+                window.document.getElementById('dec').value = de2.toFixed(2);
+                window.document.getElementById('drc').value = dr2.toFixed(2);
             } 
         }
 

@@ -104,7 +104,9 @@ body {
     display: inline-flex;
 }
 
-
+.resultados {
+    display: none;
+}
 
 .SaidadeDados {
     color: white;
@@ -131,65 +133,4 @@ body {
 .resultado {
     width: 90px;
     text-align: center;
-}
-
-.engrenagem {
-    color: white;
-    padding: 20px;
-    border-radius: 5px;
-    background-color:cadetblue;
-    margin-top: 10px;
-    display: flex;
-}
-
-.col_1 {
-    padding: 40px;
-    border-radius: 5px;
-    background-color:darkslategray;
-    margin: auto;
-}
-
-.col_2 {
-    padding: 40px;
-    border-radius: 5px;
-    background-color:darkslategray;
-    margin: auto;
-}
-
-.col_3 {
-    padding: 40px;
-    border-radius: 5px;
-    background-color:darkslategray;
-    margin: auto;
-
-}
-
-.eng {
-    color: black;
-    border: 1px solid black;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: oldlace;
-    margin: 5px;
-}
-
-.botoes {
-    margin-top: 20px;
-    display: flex;
-}
-
-.calculate {
-    margin: auto;
-}
-
-interferencia {
-    display: inline-flex;
-}
-
-.interferencia_input {
-    display: inline-flex;
-}
-
-.interferencia_resultado {
-    display: inline-flex;
 }

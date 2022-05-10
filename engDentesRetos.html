@@ -80,10 +80,10 @@
 
             <div class="imput1">             
                 <label> Altura do dente:<br>
-                    <input class="input_radio" type="radio" name="altura_do_dente" id="ac" value="1" checked>
+                    <input class="input_radio" type="radio" name="altura_do_dente" value="1" checked>
                     <label for="ac">Altura completa</label><br>
 
-                    <input class="input_radio" type="radio" name="altura_do_dente" id="ar" value="0.8">
+                    <input class="input_radio" type="radio" name="altura_do_dente" value="0.8">
                     <label for="ar">Altura reduzida</label>
                 </label> 
             </div>
@@ -238,53 +238,63 @@
 
     </div>
 
-    <div class="resultados" style="display: none;">
+    <div class="resultados">
         <h2 class="h2">Resultados:</h2>
         <h3 class="h3">Geométrico:</h3>
     
         <div class="SaidadeDados">
             <div class="BarraHorizontal2">Pinhão
-    
-                <div class="output1">
-                    <label>p</label>
-                    <input class="resultado" type="number" name="pc1" id="pc1" placeholder="mm" readonly>
-                </div>
-        
-                <div class="output1">
-                    <label>t</label>
-                    <input class="resultado" type="number" name="t1" id="t1" placeholder="mm" readonly>
-                </div>
-        
+     
                 <div class="output1">
                     <label>a</label>
-                    <input class="resultado" type="number" name="a1" id="a1" placeholder="mm" readonly>
+                    <input class="resultado" type="number" name="ap" id="ap" placeholder="mm" readonly>
                 </div>
         
                 <div class="output1">
                     <label>b</label>
-                    <input class="resultado" type="number" name="b1" id="b1" placeholder="mm" readonly>
+                    <input class="resultado" type="number" name="bp" id="bp" placeholder="mm" readonly>
                 </div>
         
                 <div class="output1">
                     <label>h<sub>t</sub></label>
-                    <input class="resultado" type="number" name="ht1" id="ht1" placeholder="mm" readonly>
+                    <input class="resultado" type="number" name="htp" id="htp" placeholder="mm" readonly>
+                </div>
+
+                <div class="output1">
+                    <label>d<sub>e</sub></label>
+                    <input class="resultado" type="number" name="dep" id="dep" placeholder="mm" readonly>
+                </div>
+
+                <div class="output1">
+                    <label>d<sub>r</sub></label>
+                    <input class="resultado" type="number" name="drp" id="drp" placeholder="mm" readonly>
                 </div>
         
                 <div class="output1">
-                    <label>r<sub>b</sub></label>
-                    <input class="resultado" type="number" name="rb1" id="rb1" placeholder="mm" readonly>
-                </div>
-        
-                <div class="output1">
-                    <label>p<sub>b</sub></label>
-                    <input class="resultado" type="number" name="pb1" id="pb1" placeholder="mm" readonly>
+                    <label>d<sub>b</sub></label>
+                    <input class="resultado" type="number" name="dbp" id="dbp" placeholder="mm" readonly>
                 </div>
     
             </div>
         </div>
     
         <div class="SaidadeDados">
-            <div class="BarraHorizontal2">Dist. entre eixos
+            <div class="BarraHorizontal2">
+
+                <div class="output1">
+                    <label>p<sub>c</sub></label>
+                    <input class="resultado" type="number" name="Pc" id="Pc" placeholder="mm" readonly>
+                </div>
+                        
+                <div class="output1">
+                    <label>p<sub>b</sub></label>
+                    <input class="resultado" type="number" name="pb" id="pb" placeholder="mm" readonly>
+                </div>
+        
+                <div class="output1">
+                    <label>t</label>
+                    <input class="resultado" type="number" name="t" id="t" placeholder="mm" readonly>
+                </div>
     
                 <div class="output1">
                     <label>C</label>
@@ -296,42 +306,37 @@
     
         <div class="SaidadeDados">
             <div class="BarraHorizontal2">Coroa
-    
-                <div class="output1">
-                    <label>p</label>
-                    <input class="resultado" type="number" name="pc2" id="pc2" placeholder="mm" readonly>
-                </div>
-        
-                <div class="output1">
-                    <label>t</label>
-                    <input class="resultado" type="number" name="t2" id="t2" placeholder="mm" readonly>
-                </div>
-        
+                
                 <div class="output1">
                     <label>a</label>
-                    <input class="resultado" type="number" name="a2" id="a2" placeholder="mm" readonly>
+                    <input class="resultado" type="number" name="ac" id="ac" placeholder="mm" readonly>
                 </div>
         
                 <div class="output1">
                     <label>b</label>
-                    <input class="resultado" type="number" name="b2" id="b2" placeholder="mm" readonly>
+                    <input class="resultado" type="number" name="bc" id="bc" placeholder="mm" readonly>
                 </div>
         
                 <div class="output1">
                     <label>h<sub>t</sub></label>
-                    <input class="resultado" type="number" name="ht2" id="ht2" placeholder="mm" readonly>
+                    <input class="resultado" type="number" name="htc" id="htc" placeholder="mm" readonly>
+                </div>
+
+                <div class="output1">
+                    <label>d<sub>e</sub></label>
+                    <input class="resultado" type="number" name="dec" id="dec" placeholder="mm" readonly>
+                </div>
+
+                <div class="output1">
+                    <label>d<sub>r</sub></label>
+                    <input class="resultado" type="number" name="drc" id="drc" placeholder="mm" readonly>
                 </div>
         
                 <div class="output1">
-                    <label>r<sub>b</sub></label>
-                    <input class="resultado" type="number" name="rb2" id="rb2" placeholder="mm" readonly>
+                    <label>d<sub>b</sub></label>
+                    <input class="resultado" type="number" name="dbc" id="dbc" placeholder="mm" readonly>
                 </div>
-        
-                <div class="output1">
-                    <label>p<sub>b</sub></label>
-                    <input class="resultado" type="number" name="pb2" id="pb2" placeholder="mm" readonly>
-                </div>
-    
+
             </div>
         </div>
     
