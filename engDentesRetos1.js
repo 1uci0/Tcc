@@ -1,42 +1,114 @@
+var i = document.getElementById('reducao');
+var H = document.getElementById('potencia');
+
+function reducao() {
+    if (i.checked == true) {
+        document.getElementById('z2').name = 'coluna1';
+        document.getElementById('dp2').name = 'coluna1';
+    }
+    else {
+        document.getElementById('z2').name = 'coluna2';
+        document.getElementById('dp2').name = 'coluna2';
+    }
+    
+    if (H.checked == true) {
+        document.getElementById('T1').name = 'coluna3';
+        document.getElementById('T2').name = 'coluna3';
+    }
+    else {
+        document.getElementById('T1').name = 'coluna4';
+        document.getElementById('T2').name = 'coluna4';
+    }
+}
 
 function confirmar() {
-    var coluna1 = document.querySelector('input[name="coluna1"]:checked').value;
-    var coluna2 = document.querySelector('input[name="coluna2"]:checked').value;
-    var coluna3 = document.querySelector('input[name="coluna3"]:checked').value;
-    var coluna4 = document.querySelector('input[name="coluna4"]:checked').value;
 
-    if (coluna1 == 'dp1') {
-        document.getElementById('dpp').readOnly = false;
+    if (i.checked == true) {
+        iTrue();
     }
     else {
-        document.getElementById('zp').readOnly = false;
+        iFalse();
     };
 
-    if (coluna2 == 'red') {
+    if (H.checked == true) {
+        Htrue();
+    }
+    else {
+        HFalse();
+    };
+
+    function iTrue() {
+        var coluna1 = document.querySelector('input[name="coluna1"]:checked').value;
         document.getElementById('i').readOnly = false;
-    }
-    else if (coluna2 == 'z2') {
-        document.getElementById('zc').readOnly = false;
-    }
-    else {
-        document.getElementById('dpc').readOnly = false;
+
+        if (coluna1 == 'z1') {
+            document.getElementById('zp').readOnly = false;
+        }
+        else if (coluna1 == 'dp1') {
+            document.getElementById('dpp').readOnly = false;
+        }
+        else if (coluna1 == 'z2') {
+            document.getElementById('zc').readOnly = false;
+        }
+        else if (coluna1 == 'dp2') {
+            document.getElementById('dpc').readOnly = false;
+        };
     };
 
-    if (coluna3 == 'pot') {
+    function iFalse() {
+        var coluna1 = document.querySelector('input[name="coluna1"]:checked').value;
+        var coluna2 = document.querySelector('input[name="coluna2"]:checked').value;
+
+        if (coluna1 == 'z1') {
+            document.getElementById('zp').readOnly = false;
+        }
+        else {
+            document.getElementById('dpp').readOnly = false;
+        };
+
+        if (coluna2 == 'z2') {
+            document.getElementById('zc').readOnly = false;
+        }
+        else {
+            document.getElementById('dpc').readOnly = false;
+        };
+    };
+
+    function Htrue() {
+        var coluna3 = document.querySelector('input[name="coluna3"]:checked').value;
         document.getElementById('H').readOnly = false;
-    }
-    else if (coluna3 == 'T1') {
-        document.getElementById('Tp').readOnly = false;
-    }
-    else {
-        document.getElementById('Tc').readOnly = false;
+
+        if (coluna3 == 'n1') {
+            document.getElementById('np').readOnly = false;
+        }
+        else if (coluna3 == 'n2') {
+            document.getElementById('nc').readOnly = false;
+        }
+        else if (coluna3 == 'T1') {
+            document.getElementById('Tp').readOnly = false;
+        }
+        else if (coluna3 == 'T2') {
+            document.getElementById('Tc').readOnly = false;
+        };
     };
 
-    if (coluna4 == 'n1') {
-        document.getElementById('np').readOnly = false;
-    }
-    else {
-        document.getElementById('nc').readOnly = false;
+    function HFalse() {
+        var coluna3 = document.querySelector('input[name="coluna3"]:checked').value;
+        var coluna4 = document.querySelector('input[name="coluna4"]:checked').value;
+
+        if (coluna3 == 'n1') {
+            document.getElementById('np').readOnly = false;
+        }
+        else {
+            document.getElementById('nc').readOnly = false;
+        };
+
+        if (coluna4 == 'T1') {
+            document.getElementById('Tp').readOnly = false;
+        }
+        else if (coluna4 == 'T2') {
+            document.getElementById('Tc').readOnly = false;
+        };
     };
 
     document.getElementById("confirmar").disabled = "disabled";
@@ -109,7 +181,7 @@ function cal() {
             else if (dp1 != '' && z2 != '') {
                 var z1 = dp1/m;
                 var dp2 = m*z2;
-            }
+            };
         }
 
         else {
@@ -120,10 +192,22 @@ function cal() {
                 var dp2 = m*z2;
             }
     
-            else {
+            else if (dp1 != '') {
                 var z1 = dp1/m;
                 var z2 = i*z1;
                 var dp2 = m*z2;
+            }
+
+            else if (z2 != '') {
+                var dp2 = m*z2;
+                var z1 = z2/i;
+                var dp1 = dp2/i;
+            }
+
+            else if (dp2 != '') {
+                var z2 = dp2/m;
+                var z1 = z2/i;
+                var dp1 = dp2/i;
             }
         };
 
@@ -239,28 +323,45 @@ function cal() {
                 var np = i*nc;
                 var Tp = Tc/i;
             }
+
+            var wt = 2*Tp/dp1;
         }
 
         else {
 
             if (np != '') {
-                var wt = 60e3/(Math.PI*dp1*np);
+                var wt = 60e3*H/(Math.PI*dp1*np);
                 var Tp = 0.5*dp1*wt;
     
                 var nc = np/i;
                 var Tc = i*Tp;
             }
+
+            else if (Tp != '') {
+                var wt = 2*Tp/dp1;
+                var np = 60e3*H/(Math.PI*dp1*wt);
+
+                var nc = np/i;
+                var Tc = i*Tp;
+            }
     
-            else {
-                var wt = 60e3/(Math.PI*dp2*nc);
+            else if (nc != '') {
+                var wt = 60e3*H/(Math.PI*dp2*nc);
                 var Tc = 0.5*dp2*wt;
     
                 var np = i*nc;
                 var Tp = Tc/i;
             }
-        }
 
-        var wt = 2*Tp/dp1;
+            else if (Tc != '') {
+                var wt = 2*Tc/dp2;
+                var nc = 60e3*H/(Math.PI*dp2*wt);
+
+                var np = i*nc;
+                var Tp = Tc/i;
+            }
+        };
+
         var H = (Math.PI*dp1*np*wt)/60e3;
     
         window.document.getElementById('np').value = np.toFixed(2);
@@ -277,5 +378,16 @@ function cal() {
     
         window.document.getElementById('w').value = w.toFixed(2);
         window.document.getElementById('wr').value = wr.toFixed(2);
+
+        // desabilitar o botão calcular
+        document.getElementById("Calcular").disabled = "disabled"
+
+        // Carregar resultados
+        mostrarResultados();
     }
+}
+
+function mostrarResultados() {
+    var resultados = document.querySelector('.resultados');
+    resultados.style.display = 'block';
 }
