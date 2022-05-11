@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="engDentesRetos.css">
     
 </head>
-<body>
+<body class="EDR">
     <!--Parâmetros iniciais-->
     <h1 class="h1">Engrenagens de Dentes Retos - SI</h1>                                <!--Título da página-->
     
@@ -18,7 +18,7 @@
         <div class="BarraHorizontal1">
 
             <div class="imput1">
-                <label> Módulo:
+                <label title="módulo da engrenagem"> Módulo:
                     <select id="M">
                         <option value="1"> 1 </option>
                         <option value="1.125"> 1.125 </option>
@@ -59,7 +59,7 @@
             </div>
 
             <div class="imput1">
-                <label> Φ:
+                <label title="ângulo de pressão"> Φ:
                     <select id="phi">
                         <option value="20"> 20° </option>
                         <option value="22.5"> 22.5° </option>
@@ -96,46 +96,46 @@
 
             <div class="parametro">
                 <label>
-                    <input type="radio" name="coluna1" id="z1" value="z1">
+                    <input title="número de dentes do pinhão" type="radio" name="coluna1" id="z1" value="z1">
                     <label style="margin-right: 10px;" for="z1">Z<sub>p</sub></label><br>
 
-                    <input style="margin-top: 10px;" type="radio" name="coluna3" id="n1" value="n1">
+                    <input title="rotação do pinhão" style="margin-top: 10px;" type="radio" name="coluna3" id="n1" value="n1">
                     <label style="margin-right: 10px;" for="n1">n<sub>p</sub></label><br>
                 </label>
 
                 <label>
-                    <input style="margin-top: 3px;" type="radio" name="coluna1" id="dp1" value="dp1">
+                    <input title="diâmetro primitivo do pinhão" style="margin-top: 3px;" type="radio" name="coluna1" id="dp1" value="dp1">
                     <label style="margin-right: 10px;" for="dp1">d<sub>p<sub>p</sub></label><br>
 
-                    <input style="margin-top: 8.5px;" type="radio" name="coluna3" id="n2" value="n2">
+                    <input title="rotação da coroa" style="margin-top: 8.5px;" type="radio" name="coluna3" id="n2" value="n2">
                     <label style="margin-right: 10px;" for="n2">n<sub>c</sub></label><br>
                 </label>
             </div>
 
             <div class="parametro">
                 <label>
-                    <input onchange="reducao()" type="checkbox" id="reducao">
+                    <input title="razão de redução" onchange="reducao()" type="checkbox" id="reducao">
                     <label for="reducao">i</label><br>
 
-                    <input style="margin-top: 13px;" onchange="reducao()" type="checkbox" id="potencia">
+                    <input title="potência" style="margin-top: 13px;" onchange="reducao()" type="checkbox" id="potencia">
                     <label for="potencia">H</label><br>
                 </label>
             </div>
             
             <div class="parametro">
                 <label>
-                    <input type="radio" name="coluna2" id="z2" value="z2">
+                    <input title="número de dentes da coroa" type="radio" name="coluna2" id="z2" value="z2">
                     <label for="z2">Z<sub>c</sub></label><br>
 
-                    <input style="margin-top: 10px;" type="radio" name="coluna4" id="T1" value="T1">
+                    <input title="torque do pinhão" style="margin-top: 10px;" type="radio" name="coluna4" id="T1" value="T1">
                     <label for="T1">T<sub>p</sub></label><br>
                 </label>
 
                 <label>
-                    <input type="radio" name="coluna2" id="dp2" value="dp2">
+                    <input title="diâmetro primitivo da coroa" type="radio" name="coluna2" id="dp2" value="dp2">
                     <label for="dp2">d<sub>p<sub>c</sub></label><br>
 
-                    <input style="margin-top: 8.5px;" type="radio" name="coluna4" id="T2" value="T2">
+                    <input title="torque da coroa" style="margin-top: 8.5px;" type="radio" name="coluna4" id="T2" value="T2">
                     <label for="T2">T<sub>c</sub></label><br>
                 </label>
             </div>
@@ -246,32 +246,32 @@
             <div class="BarraHorizontal2">Pinhão
      
                 <div class="output1">
-                    <label>a</label>
+                    <label title="adendo">a</label>
                     <input class="resultado" type="number" name="ap" id="ap" placeholder="mm" readonly>
                 </div>
         
                 <div class="output1">
-                    <label>b</label>
+                    <label title="dedendo">b</label>
                     <input class="resultado" type="number" name="bp" id="bp" placeholder="mm" readonly>
                 </div>
         
                 <div class="output1">
-                    <label>h<sub>t</sub></label>
+                    <label title="altura do dente">h<sub>t</sub></label>
                     <input class="resultado" type="number" name="htp" id="htp" placeholder="mm" readonly>
                 </div>
 
                 <div class="output1">
-                    <label>d<sub>e</sub></label>
+                    <label title="diâmetro externo">d<sub>e</sub></label>
                     <input class="resultado" type="number" name="dep" id="dep" placeholder="mm" readonly>
                 </div>
 
                 <div class="output1">
-                    <label>d<sub>r</sub></label>
+                    <label title="diâmetro de raiz">d<sub>r</sub></label>
                     <input class="resultado" type="number" name="drp" id="drp" placeholder="mm" readonly>
                 </div>
         
                 <div class="output1">
-                    <label>d<sub>b</sub></label>
+                    <label title="diâmetro de base">d<sub>b</sub></label>
                     <input class="resultado" type="number" name="dbp" id="dbp" placeholder="mm" readonly>
                 </div>
     
@@ -279,25 +279,25 @@
         </div>
     
         <div class="SaidadeDados">
-            <div class="BarraHorizontal2">
+            <div class="BarraHorizontal2"> pinhão - coroa
 
                 <div class="output1">
-                    <label>p<sub>c</sub></label>
+                    <label title="passo circular">p<sub>c</sub></label>
                     <input class="resultado" type="number" name="Pc" id="Pc" placeholder="mm" readonly>
                 </div>
                         
                 <div class="output1">
-                    <label>p<sub>b</sub></label>
+                    <label title="passo de base">p<sub>b</sub></label>
                     <input class="resultado" type="number" name="pb" id="pb" placeholder="mm" readonly>
                 </div>
         
                 <div class="output1">
-                    <label>t</label>
+                    <label title="espessura do dente">t</label>
                     <input class="resultado" type="number" name="t" id="t" placeholder="mm" readonly>
                 </div>
     
                 <div class="output1">
-                    <label>C</label>
+                    <label title="distância entre centros">C</label>
                     <input class="resultado" type="number" name="C" id="C" placeholder="mm" readonly>
                 </div>
     
@@ -343,10 +343,10 @@
         <h3 class="h3">Interferência:</h3>
     
         <div class="SaidadeDados">
-            <div class="BarraHorizontal2"> N° mínimo de dentes
+            <div class="BarraHorizontal2">
     
                 <div class="output1">
-                    <label>Z<sub>p</sub></label>
+                    <label title="Número mínimo de dentes do pinhão">Z<sub>p</sub></label>
                     <input class="resultado" type="number" name="z_min_p" id="z_min_p" placeholder="mm" readonly>
                 </div>
     
@@ -354,10 +354,10 @@
         </div>
     
         <div class="SaidadeDados">
-            <div class="BarraHorizontal2"> N° máximo de dentes
+            <div class="BarraHorizontal2">
     
                 <div class="output1">
-                    <label>Z<sub>c<sub></label>
+                    <label title="Número máximo de dentes da coroa">Z<sub>c<sub></label>
                     <input class="resultado" type="number" name="z_max_c" id="z_max_c" placeholder="mm" readonly>
                 </div>
     
@@ -367,10 +367,10 @@
         <h3 class="h3">Força:</h3>
     
         <div class="SaidadeDados">
-            <div class="BarraHorizontal2"> Força pinhão-coroa
+            <div class="BarraHorizontal2"> 
     
                 <div class="output1">
-                    <label>W<sub>p-c</sub></label>
+                    <label title="força pinhão-coroa">W<sub>p-c</sub></label>
                     <input class="resultado" type="number" name="w" id="w" placeholder="kN" readonly>
                 </div>
     
@@ -378,10 +378,10 @@
         </div>
     
         <div class="SaidadeDados">
-            <div class="BarraHorizontal2"> Componente tangencial
+            <div class="BarraHorizontal2">
     
                 <div class="output1">
-                    <label>W<sup> t</sup></label>
+                    <label title="componente tangencial">W<sup> t</sup></label>
                     <input class="resultado" type="number" name="wt" id="wt" placeholder="kN" readonly>
                 </div>
     
@@ -389,10 +389,10 @@
         </div>
     
         <div class="SaidadeDados">
-            <div class="BarraHorizontal2"> Componente radial
+            <div class="BarraHorizontal2">
     
                 <div class="output1">
-                    <label>W<sup> r</sup></label>
+                    <label title="componente radial">W<sup> r</sup></label>
                     <input class="resultado" type="number" name="wr" id="wr" placeholder="kN" readonly>
                 </div>
     
